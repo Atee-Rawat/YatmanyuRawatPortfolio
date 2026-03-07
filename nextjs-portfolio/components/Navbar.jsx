@@ -21,7 +21,12 @@ export default function Navbar() {
             }
         }
         window.addEventListener('scroll', onScroll, { passive: true })
-        return () => window.removeEventListener('scroll', onScroll)
+        window.addEventListener('touchmove', onScroll, { passive: true })
+        onScroll() // fire immediately to set correct state on load
+        return () => {
+            window.removeEventListener('scroll', onScroll)
+            window.removeEventListener('touchmove', onScroll)
+        }
     }, [])
 
     const navLinks = [
