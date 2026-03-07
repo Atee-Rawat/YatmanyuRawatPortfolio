@@ -13,6 +13,9 @@ export default function Hero() {
     const [mouse, setMouse] = useState({ x: 0, y: 0 })
 
     useEffect(() => {
+        // Only apply mouse parallax on non-touch devices
+        const isTouch = window.matchMedia('(hover: none)').matches
+        if (isTouch) return
         const handleMove = (e) => {
             setMouse({
                 x: (e.clientX / window.innerWidth - 0.5) * 20,

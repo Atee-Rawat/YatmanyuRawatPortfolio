@@ -24,6 +24,8 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 body {
@@ -32,6 +34,8 @@ body {
   font-family: 'DM Sans', sans-serif;
   font-weight: 300;
   overflow-x: hidden;
+  max-width: 100%;
+  position: relative;
 }
 
 /* ========== SCROLLBAR ========== */
@@ -302,7 +306,6 @@ nav.scrolled {
   text-decoration: none;
   transition: border-color .3s, color .3s;
   display: inline-block;
-  cursor: none;
 }
 
 .btn-ghost:hover {
@@ -480,7 +483,6 @@ nav.scrolled {
   color: var(--muted);
   background: var(--white);
   transition: border-color .25s, color .25s;
-  cursor: none;
 }
 
 .about-pill:hover {
@@ -651,6 +653,7 @@ nav.scrolled {
 #skills {
   background: var(--white);
   padding: 110px 64px;
+  overflow-x: hidden;
 }
 
 .skills-wrap {
@@ -722,7 +725,6 @@ nav.scrolled {
   font-size: .68rem;
   letter-spacing: .06em;
   color: var(--muted);
-  cursor: none;
   transition: all .35s cubic-bezier(.4, 0, .2, 1);
   transform: translateY(0);
 }
@@ -1059,7 +1061,6 @@ nav.scrolled {
   text-transform: uppercase;
   text-decoration: none;
   transition: background .3s, transform .2s;
-  cursor: none;
   font-family: 'DM Sans', sans-serif;
 }
 
@@ -1142,7 +1143,7 @@ footer span {
 /* ========== MOBILE ========== */
 @media(max-width:960px) {
   nav {
-    padding: 18px 24px;
+    padding: 18px 20px;
   }
 
   .nav-links {
@@ -1153,58 +1154,80 @@ footer span {
     display: flex;
   }
 
+  /* ---- Hero ---- */
   .hero-inner {
     grid-template-columns: 1fr;
   }
 
   .hero-left {
-    padding: 110px 24px 40px;
+    padding: 100px 20px 32px;
   }
 
   .hero-right {
-    padding: 10px 24px 60px;
+    padding: 8px 20px 56px;
   }
 
+  .hero-actions {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  /* ---- About ---- */
   #about {
     grid-template-columns: 1fr;
-    padding: 70px 24px;
-    gap: 40px;
+    padding: 60px 20px;
+    gap: 36px;
   }
 
+  /* ---- Shared section padding ---- */
   #experience,
   #skills,
   #education,
   #extra,
   #contact,
   #hire {
-    padding: 70px 24px;
+    padding: 60px 20px;
+  }
+
+  /* ---- Experience timeline ---- */
+  .exp-timeline::before {
+    display: none;
+    /* hide vertical line on mobile */
   }
 
   .exp-item {
     grid-template-columns: 1fr;
-    gap: 10px;
+    /* stack meta above content */
+    gap: 12px;
+    padding: 28px 0;
+  }
+
+  /* hide the timeline dot on mobile — it overlaps the stacked layout */
+  .exp-item::before {
+    display: none;
   }
 
   .exp-meta {
     padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
   }
 
+  /* Make date/loc/type inline chips on mobile */
+  .exp-date {
+    font-size: .6rem;
+  }
+
+  .exp-type {
+    margin-top: 0;
+  }
+
+  /* ---- Skills ---- */
   .skills-wrap {
     grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .edu-cards {
-    grid-template-columns: 1fr;
-  }
-
-  .extra-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 36px;
   }
 
   .skills-wrap>*,
@@ -1214,20 +1237,8 @@ footer span {
     overflow: hidden;
   }
 
-  /* Right column of skills: cap width and add spacing */
   .skills-wrap>*:last-child {
     max-width: 100%;
-    padding-right: 4px;
-  }
-
-  .hire-modal-grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
-    padding-top: 10px;
-  }
-
-  .form-name-grid {
-    grid-template-columns: 1fr;
   }
 
   .skill-bar {
@@ -1242,12 +1253,64 @@ footer span {
     word-break: break-word;
   }
 
+  /* ---- Education ---- */
+  .edu-cards {
+    grid-template-columns: 1fr;
+  }
+
+  /* ---- Extra ---- */
+  .extra-grid {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+
+  .lang-bar {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  /* ---- Contact ---- */
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .contact-items {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  /* ---- Hire modal ---- */
+  .hire-modal-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding-top: 10px;
+  }
+
+  .form-name-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* ---- Hire section button ---- */
+  #hire {
+    padding: 50px 20px;
+  }
+
+  .hire-lightning-wrapper {
+    width: 100%;
+    max-width: 340px;
+  }
+
+  /* ---- Footer ---- */
   footer {
     flex-direction: column;
     gap: 8px;
     text-align: center;
+    padding: 24px 20px;
   }
 }
+
 
 /* ========== MOBILE NAV ========== */
 .mobile-nav {
@@ -1273,6 +1336,7 @@ footer span {
 .mobile-nav a:hover {
   color: var(--gold);
 }
+
 /* ========== HIRE BUTTON LIGHTNING BORDER ========== */
 @property --angle {
   syntax: '<angle>';
@@ -1281,8 +1345,13 @@ footer span {
 }
 
 @keyframes spin-border {
-  0%   { --angle: 0deg; }
-  100% { --angle: 360deg; }
+  0% {
+    --angle: 0deg;
+  }
+
+  100% {
+    --angle: 360deg;
+  }
 }
 
 .hire-lightning-wrapper {

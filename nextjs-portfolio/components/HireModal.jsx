@@ -30,23 +30,6 @@ export default function HireModal({ isOpen, onClose }) {
                         overflowY: 'auto'
                     }}
                 >
-                    {/* Close button */}
-                    <motion.button
-                        onPointerEnter={(e) => { if (e.pointerType === 'mouse') setCloseHovered(true) }}
-                        onPointerLeave={(e) => { setCloseHovered(false) }}
-                        onClick={(e) => { e.preventDefault(); setCloseHovered(true) }}
-                        whileHover={{ scale: 1.05, borderColor: 'var(--gold)', color: 'var(--gold)' }}
-                        whileTap={{ scale: 0.95 }}
-                        style={{
-                            position: 'absolute', top: '20px', right: '28px',
-                            background: 'none', border: '1px solid rgba(255,255,255,0.2)',
-                            color: 'rgba(255,255,255,0.6)', fontSize: '1rem', padding: '8px 16px',
-                            cursor: closeHovered ? 'not-allowed' : 'pointer', letterSpacing: '0.1em', fontFamily: "'DM Sans', sans-serif",
-                            transition: 'border-color 0.2s, color 0.2s'
-                        }}
-                    >
-                        {closeHovered ? 'LISTEN TO SHIA' : '\u2715 Close'}
-                    </motion.button>
 
                     <motion.div
                         initial={{ scale: 0.9, opacity: 0, y: 20 }}
@@ -76,12 +59,32 @@ export default function HireModal({ isOpen, onClose }) {
 
                         {/* Form side */}
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                            <h3 style={{
-                                fontFamily: "'Playfair Display', serif", fontSize: '2.2rem', fontWeight: 600,
-                                color: '#fff', margin: 0, paddingBottom: '8px'
-                            }}>
-                                Contact <em style={{ fontStyle: 'italic', color: 'var(--gold)' }}>Yatmanyu</em>
-                            </h3>
+                            {/* Header row: title + close button always side by side */}
+                            <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: '12px' }}>
+                                <h3 style={{
+                                    fontFamily: "'Playfair Display', serif", fontSize: 'clamp(1.4rem, 4vw, 2.2rem)', fontWeight: 600,
+                                    color: '#fff', margin: 0, paddingBottom: '8px', flexShrink: 1, minWidth: 0
+                                }}>
+                                    Contact <em style={{ fontStyle: 'italic', color: 'var(--gold)' }}>Yatmanyu</em>
+                                </h3>
+                                <motion.button
+                                    onPointerEnter={(e) => { if (e.pointerType === 'mouse') setCloseHovered(true) }}
+                                    onPointerLeave={() => setCloseHovered(false)}
+                                    onClick={(e) => { e.preventDefault(); setCloseHovered(true) }}
+                                    whileHover={{ scale: 1.05, borderColor: 'var(--gold)', color: 'var(--gold)' }}
+                                    whileTap={{ scale: 0.95 }}
+                                    style={{
+                                        flexShrink: 0,
+                                        background: 'none', border: '1px solid rgba(255,255,255,0.2)',
+                                        color: 'rgba(255,255,255,0.6)', fontSize: '.85rem', padding: '8px 14px',
+                                        cursor: closeHovered ? 'not-allowed' : 'pointer', letterSpacing: '0.1em',
+                                        fontFamily: "'DM Sans', sans-serif", whiteSpace: 'nowrap',
+                                        transition: 'border-color 0.2s, color 0.2s'
+                                    }}
+                                >
+                                    {closeHovered ? 'LISTEN TO SHIA' : '\u2715 Close'}
+                                </motion.button>
+                            </div>
 
                             <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
                                 <div className="form-name-grid">
