@@ -3,7 +3,6 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 export default function HireModal({ isOpen, onClose }) {
-    const [closeHovered, setCloseHovered] = useState(false)
     const [formSuccess, setFormSuccess] = useState(false)
 
     const handleSubmit = (e) => {
@@ -52,7 +51,7 @@ export default function HireModal({ isOpen, onClose }) {
                                     controls
                                     style={{ width: '100%', display: 'block', objectFit: 'cover' }}
                                 >
-                                    <source src="/shia.mp4" type="video/mp4" />
+                                    <source src="/newShia.mp4" type="video/mp4" />
                                 </video>
                             </div>
                         </div>
@@ -68,21 +67,20 @@ export default function HireModal({ isOpen, onClose }) {
                                     Contact <em style={{ fontStyle: 'italic', color: 'var(--gold)' }}>Yatmanyu</em>
                                 </h3>
                                 <motion.button
-                                    onPointerEnter={(e) => { if (e.pointerType === 'mouse') setCloseHovered(true) }}
-                                    onPointerLeave={() => setCloseHovered(false)}
-                                    onClick={(e) => { e.preventDefault(); setCloseHovered(true) }}
+                                    type="button"
+                                    onClick={onClose}
                                     whileHover={{ scale: 1.05, borderColor: 'var(--gold)', color: 'var(--gold)' }}
                                     whileTap={{ scale: 0.95 }}
                                     style={{
                                         flexShrink: 0,
                                         background: 'none', border: '1px solid rgba(255,255,255,0.2)',
                                         color: 'rgba(255,255,255,0.6)', fontSize: '.85rem', padding: '8px 14px',
-                                        cursor: closeHovered ? 'not-allowed' : 'pointer', letterSpacing: '0.1em',
+                                        cursor: 'pointer', letterSpacing: '0.1em',
                                         fontFamily: "'DM Sans', sans-serif", whiteSpace: 'nowrap',
                                         transition: 'border-color 0.2s, color 0.2s'
                                     }}
                                 >
-                                    {closeHovered ? 'LISTEN TO SHIA' : '\u2715 Close'}
+                                    {'\u2715 Close'}
                                 </motion.button>
                             </div>
 
