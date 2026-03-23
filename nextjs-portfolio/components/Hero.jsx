@@ -1,5 +1,5 @@
 'use client'
-import { useEffect, useRef, useState } from 'react'
+import { useRef } from 'react'
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion'
 
 const fadeUp = { hidden: { opacity: 0, y: 40 }, show: (i) => ({ opacity: 1, y: 0, transition: { duration: 0.8, delay: 0.1 + i * 0.15, ease: [0.16, 1, 0.3, 1] } }) }
@@ -9,22 +9,6 @@ export default function Hero() {
     const { scrollY } = useScroll()
     const y = useTransform(scrollY, [0, 1000], [0, 300])
     const opacity = useTransform(scrollY, [0, 500], [0.03, 0])
-
-    const [mouse, setMouse] = useState({ x: 0, y: 0 })
-
-    useEffect(() => {
-        // Only apply mouse parallax on non-touch devices
-        const isTouch = window.matchMedia('(hover: none)').matches
-        if (isTouch) return
-        const handleMove = (e) => {
-            setMouse({
-                x: (e.clientX / window.innerWidth - 0.5) * 20,
-                y: (e.clientY / window.innerHeight - 0.5) * 20
-            })
-        }
-        window.addEventListener('mousemove', handleMove)
-        return () => window.removeEventListener('mousemove', handleMove)
-    }, [])
 
     return (
         <section id="hero" style={{ position: 'relative', overflow: 'hidden', minHeight: '100vh', background: 'var(--dark)' }}>
@@ -62,7 +46,7 @@ export default function Hero() {
 
             <div className="hero-grid-lines" />
 
-            <motion.div className="hero-inner" style={{ x: mouse.x, y: mouse.y }}>
+            <motion.div className="hero-inner">
                 <div className="hero-left">
                     <motion.div className="hero-badge" custom={0} initial="hidden" animate="show" variants={fadeUp}
                         whileHover={{ scale: 1.05, backgroundColor: 'rgba(61,107,94,0.3)' }}
