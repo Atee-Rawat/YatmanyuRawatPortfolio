@@ -12,7 +12,7 @@ const TOP_SKILLS = [
     { name: 'Research & Development', w: 0.85 },
 ]
 
-const TOOLS = ['Salesforce', 'Genesys', 'UKG-Pro', 'Pipeline CRM', 'TrustLayer', 'Microsoft 365', 'Excel for Business', 'Google Docs', 'CanLII', 'Lexis+', 'Generative AI', 'Prompt Engineering']
+const TOOLS = ['Salesforce', 'Genesys', 'UKG-Pro', 'Pipeline CRM', 'TrustLayer', 'Microsoft 365', 'Excel for Business', 'Google Docs', 'CanLII', 'Lexis+', 'Generative AI', 'Prompt Engineering', 'Doxserá', 'Asana', 'Adobe']
 const PROF_SKILLS = ['Legal Drafting', 'Case Research', 'Arbitration', 'IP & Trademarks', 'Corporate Law', 'Customer Retention', 'Legal Intake', 'Proofreading', 'Income Tax Planning', 'Investment Analysis', 'Logistics Management']
 const CERTS = [
     { name: 'Lawyer', issuer: 'Bar Council of Delhi · Issued January 2023' },
