@@ -108,7 +108,6 @@ export default function HireModal({ isOpen, onClose }) {
                                         <option>Financial Services Role</option>
                                         <option>Client Relations Position</option>
                                         <option>General Inquiry</option>
-                                        <option>Just Shia made me do it</option>
                                     </select>
                                 </div>
                                 <div>
