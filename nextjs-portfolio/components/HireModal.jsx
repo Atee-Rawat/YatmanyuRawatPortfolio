@@ -38,7 +38,7 @@ export default function HireModal({ isOpen, onClose }) {
                         className="hire-modal-grid"
                     >
                         {/* Video side */}
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                        {/* <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
                             <p style={{
                                 fontFamily: "'Playfair Display', serif", fontSize: '1.2rem', color: 'rgba(255,255,255,0.5)',
                                 fontStyle: 'italic', textAlign: 'left', margin: 0
@@ -54,7 +54,7 @@ export default function HireModal({ isOpen, onClose }) {
                                     <source src="/newShia.mp4" type="video/mp4" />
                                 </video>
                             </div>
-                        </div>
+                        </div> */}
 
                         {/* Form side */}
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
