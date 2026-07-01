@@ -71,7 +71,10 @@ export default function Hero() {
                     </motion.p>
 
                     <motion.div className="hero-actions" custom={5} initial="hidden" animate="show" variants={fadeUp}>
-                        <motion.a href="#experience" className="btn-gold" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                        <motion.a href="/resume.pdf" download className="btn-gold" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                            Download Resume
+                        </motion.a>
+                        <motion.a href="#experience" className="btn-ghost" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                             View Experience
                         </motion.a>
                         <motion.a href="#contact" className="btn-ghost" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>

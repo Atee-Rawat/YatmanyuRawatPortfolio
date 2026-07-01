@@ -4,14 +4,16 @@ import { motion, useInView } from 'framer-motion'
 
 const EDU = [
     {
-        year: 'Jan 2025 – Jan 2026 · Currently Enrolled',
-        degree: 'PDD Financial Planning',
+        year: 'Jan 2025 – Jun 2026',
+        degree: 'Diploma, Banking, Corporate, Finance, and Securities Law',
         school: 'Douglas College',
         location: 'New Westminster, BC, Canada',
-        detail: `Currently enrolled in the PDD Financial Planning at Douglas College, a comprehensive program accredited by FP Canada with an in-depth focus on wealth management, retirement planning, tax strategies, and risk assessment. Through this rigorous course, I will develop:
-<br/>• Expertise in CFP®-aligned financial planning principles.
-<br/>• Hands-on skills in investment analysis, estate planning, and insurance solutions.
-<br/>• The ability to create client-focused strategies using tools like financial modeling and Excel for business.`,
+        detail: `Completed the Post-Degree Diploma in Financial Planning at Douglas College, a comprehensive program accredited by FP Canada.
+<br/>• Wealth & Retirement Planning: Developed expertise in CFP®-aligned financial planning principles to construct tailored wealth and retirement strategies.
+<br/>• Taxation & Risk Assessment: Focused on navigating tax strategies and risk metrics to optimize long-term financial security.
+<br/>• Investment & Estate Analysis: Gained hands-on skills in investment analysis, structured estate planning, and targeted insurance solutions.
+<br/>• Data Modeling & Analytics: Built data-driven financial strategies utilizing technical financial modeling and advanced Excel for business.
+<br/>• Personal Finance I & II (Foundational & Advanced): Mastered the core pillars of comprehensive financial planning. Covered everything from cash flow management, credit optimization, and strategic budgeting to complex wealth accumulation and distribution strategies aligned with CFP® standards.`,
         tags: ['CFP® Track', 'Wealth Management', 'Tax Strategies', 'Risk Assessment', 'Financial Modelling'],
     },
     {

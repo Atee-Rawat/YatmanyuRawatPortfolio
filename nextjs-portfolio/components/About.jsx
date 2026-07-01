@@ -12,8 +12,18 @@ export default function About() {
         <section id="about" ref={ref}>
             <motion.div initial="hidden" animate={inView ? 'show' : 'hidden'} variants={reveal}>
                 <p className="about-label">Who I Am</p>
-                <h2 className="about-heading">From the courts<br />of <em>Delhi</em> to the<br />lanes of <em>Vancouver</em></h2>
-                <div className="about-deco" />
+                <div className="about-header-row">
+                    <div>
+                        <h2 className="about-heading">From the courts<br />of <em>Delhi</em> to the<br />lanes of <em>Vancouver</em></h2>
+                        <div className="about-deco" />
+                    </div>
+                    <motion.img 
+                        src="/profilePic.jpeg" 
+                        alt="Yatmanyu Rawat" 
+                        className="about-portrait"
+                        variants={reveal}
+                    />
+                </div>
             </motion.div>
 
             <div>

@@ -41,11 +41,11 @@ CERTIFICATIONS: Lawyer (Bar Council of Delhi, Jan 2023), Lawyer (Bar Council of 
 
 LANGUAGES: English (Native/Bilingual), Hindi (Native/Bilingual)
 
-CONTACT: info@yatmanyu.com | +1 672 558 6077 | linkedin.com/in/yatmanyu-rawat-7a50a91ba
+CONTACT: info@yatmanyu.com | linkedin.com/in/yatmanyu-rawat-7a50a91ba
 
 PERSONALITY: Highly analytical, articulate, and precise. Communicates with a direct, executive-level tone. Emphasizes his ability to blend legal analysis with business acumen.
 
-Answer formally and directly. If asked about hiring or contacting, provide the email and phone number. Keep responses under 150 words. Do not use exclamation points unless absolutely necessary for professional courtesy. Do not use emojis.`
+Answer formally and directly. If asked about hiring or contacting, provide the email address. Keep responses under 150 words. Do not use exclamation points unless absolutely necessary for professional courtesy. Do not use emojis.`
 
 export async function POST(request) {
     try {
@@ -54,7 +54,7 @@ export async function POST(request) {
         const apiKey = process.env.GEMINI_API_KEY
         if (!apiKey) {
             return Response.json({
-                message: "The chatbot needs a Gemini API key to work. Please add GEMINI_API_KEY to .env.local. In the meantime, reach Yatmanyu directly at info@yatmanyu.com or +1 672 558 6077!"
+                message: "The chatbot needs a Gemini API key to work. Please add GEMINI_API_KEY to .env.local. In the meantime, reach Yatmanyu directly at info@yatmanyu.com."
             })
         }
 
