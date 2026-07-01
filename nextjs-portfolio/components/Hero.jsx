@@ -70,16 +70,37 @@ export default function Hero() {
                         "I bring a fusion of legal prowess and a robust background in law, finance, administration, client relations, and business development."
                     </motion.p>
 
-                    <motion.div className="hero-actions" custom={5} initial="hidden" animate="show" variants={fadeUp}>
-                        <motion.a href="/resume.pdf" download className="btn-gold" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                            Download Resume
-                        </motion.a>
-                        <motion.a href="#experience" className="btn-ghost" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                            View Experience
-                        </motion.a>
-                        <motion.a href="#contact" className="btn-ghost" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                            Get in Touch
-                        </motion.a>
+                    <motion.div className="hero-actions" custom={5} initial="hidden" animate="show" variants={fadeUp} style={{ flexDirection: 'column', alignItems: 'stretch', width: '100%', maxWidth: '420px' }}>
+                        <div className="hire-lightning-wrapper" style={{ width: '100%' }}>
+                            <div className="hire-lightning-inner" style={{ width: '100%' }}>
+                                <motion.a 
+                                    href="/resume.pdf" 
+                                    download 
+                                    className="btn-gold" 
+                                    style={{ 
+                                        width: '100%', 
+                                        textAlign: 'center',
+                                        background: 'linear-gradient(135deg, var(--gold), var(--gold2))',
+                                        padding: '16px 40px',
+                                        display: 'block',
+                                        boxSizing: 'border-box'
+                                    }}
+                                    whileHover={{ scale: 1.02 }} 
+                                    whileTap={{ scale: 0.98 }}
+                                >
+                                    Download Resume
+                                </motion.a>
+                            </div>
+                        </div>
+
+                        <div style={{ display: 'flex', gap: '16px', width: '100%' }}>
+                            <motion.a href="#contact" className="btn-ghost" style={{ flex: 1, textAlign: 'center', padding: '14px 0', boxSizing: 'border-box' }} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                                Get in Touch
+                            </motion.a>
+                            <motion.a href="#experience" className="btn-ghost" style={{ flex: 1, textAlign: 'center', padding: '14px 0', boxSizing: 'border-box' }} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                                Experience
+                            </motion.a>
+                        </div>
                     </motion.div>
                 </div>
 
