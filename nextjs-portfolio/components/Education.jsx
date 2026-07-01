@@ -5,7 +5,7 @@ import { motion, useInView } from 'framer-motion'
 const EDU = [
     {
         year: 'Jan 2025 – Jun 2026',
-        degree: 'Diploma, Banking, Corporate, Finance, and Securities Law',
+        degree: 'PDD Financial Planning',
         school: 'Douglas College',
         location: 'New Westminster, BC, Canada',
         detail: `Completed the Post-Degree Diploma in Financial Planning at Douglas College, a comprehensive program accredited by FP Canada.
