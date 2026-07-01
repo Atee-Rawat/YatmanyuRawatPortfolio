@@ -10,10 +10,10 @@ ABOUT:
 Multidisciplinary professional bridging law, finance, and business. Began with English Honours, pursued law at the University of Delhi, and is currently specializing in business law and finance in Vancouver. Offers a unique synthesis of legal precision with a robust background in finance, administration, client relations, and business development. Experienced in drafting legal clauses, ledger management, and strategic planning.
 
 CURRENT EDUCATION:
-- Jan 2025–Jan 2026: Diploma, Banking/Corporate/Finance/Securities Law — Douglas College, New Westminster, BC (CFP® Track)
-- Sep 2023–Sep 2024: Business Law, International Business, Trade & Tax Law — Douglas College (GPA 3.49)
-- Jul 2019–Oct 2022: Bachelor of Laws (LL.B) — Faculty of Law, University of Delhi (Moot Court Society)
-- Jul 2016–Jul 2019: BA (Honours) English — Dr. B.R. Ambedkar University Delhi (1st Division)
+- Jan 2025–Jun 2026: PDD Financial Planning — Douglas College, New Westminster, BC (CFP® Track)
+- Sep 2023–Sep 2024: PDD Business Law — Douglas College, New Westminster, BC (GPA 3.49)
+- Jul 2019–Oct 2022: Bachelor of Laws (LL.B) — Campus Law Centre, Faculty of Law, University of Delhi (Moot Court Society)
+- Jul 2016–Jul 2019: BA (Honours) in English, English Language and Literature/Letters — Dr. B.R. Ambedkar University Delhi (1st Division)
 
 WORK EXPERIENCE:
 1. Customer Experience Specialist @ Grandview Lanes (Sep 2024–Present, Vancouver, Full-time)
