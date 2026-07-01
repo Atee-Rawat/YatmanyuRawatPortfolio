@@ -7,6 +7,17 @@ const INITIAL_MESSAGE = {
     content: "Hi! I'm Yatmanyu's virtual assistant 👋 Ask me anything about his background, skills, experience, or how to get in touch!",
 }
 
+const renderText = (text) => {
+    const parts = text.split(/(\[[^\]]+\]\([^)]+\))/g);
+    return parts.map((part, i) => {
+        const match = part.match(/\[([^\]]+)\]\(([^)]+)\)/);
+        if (match) {
+            return <a key={i} href={match[2]} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', color: 'inherit', fontWeight: 'bold' }}>{match[1]}</a>;
+        }
+        return <span key={i}>{part}</span>;
+    });
+};
+
 export default function ChatWidget() {
     const [open, setOpen] = useState(false)
     const [messages, setMessages] = useState([INITIAL_MESSAGE])
@@ -112,8 +123,9 @@ export default function ChatWidget() {
                                         color: m.role === 'user' ? 'var(--dark)' : 'rgba(255,255,255,.85)',
                                         fontSize: '.8rem', lineHeight: 1.6,
                                         fontFamily: "'DM Sans',sans-serif",
+                                        whiteSpace: 'pre-wrap',
                                     }}>
-                                        {m.content}
+                                        {renderText(m.content)}
                                     </div>
                                 </div>
                             ))}
