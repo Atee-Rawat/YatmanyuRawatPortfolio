@@ -37,7 +37,7 @@ TOOLS: Salesforce, Genesys, UKG-Pro, Pipeline CRM, TrustLayer, Microsoft 365, Ex
 
 PROFESSIONAL SKILLS: Legal Drafting, Case Research, Arbitration, IP & Trademarks, Corporate Law, Customer Retention, Legal Intake, Proofreading, Income Tax Planning, Investment Analysis, Logistics Management
 
-CERTIFICATIONS: Lawyer (Bar Council of Delhi, Jan 2023), Lawyer (Bar Council of India, Jun 2023), LLQP Candidate, NCA Candidate
+CERTIFICATIONS: Lawyer (Bar Council of Delhi, Jan 2023), Lawyer (Bar Council of India, Jun 2023), NCA Candidate
 
 LANGUAGES: English (Native/Bilingual), Hindi (Native/Bilingual)
 

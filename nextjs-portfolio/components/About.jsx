@@ -37,7 +37,7 @@ export default function About() {
                 </motion.div>
 
                 <motion.div className="about-pills" initial="hidden" animate={inView ? 'show' : 'hidden'} variants={{ hidden: {}, show: { transition: { staggerChildren: 0.05 } } }}>
-                    {['Legal Administration', 'Financial Planning', 'Client Relations', 'Business Development', 'Salesforce Sales Cloud', 'LLQP Candidate', 'CFP® Track'].map(pill => (
+                    {['Legal Administration', 'Financial Planning', 'Client Relations', 'Business Development', 'Salesforce Sales Cloud', 'CFP® Track'].map(pill => (
                         <motion.span key={pill} className="about-pill" variants={reveal}>{pill}</motion.span>
                     ))}
                 </motion.div>

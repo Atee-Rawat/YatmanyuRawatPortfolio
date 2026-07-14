@@ -17,7 +17,6 @@ const PROF_SKILLS = ['Legal Drafting', 'Case Research', 'Arbitration', 'IP & Tra
 const CERTS = [
     { name: 'Lawyer', issuer: 'Bar Council of Delhi · Issued January 2023' },
     { name: 'Lawyer', issuer: 'Bar Council of India · Issued June 2023' },
-    { name: 'LLQP Candidate', issuer: 'Life Licence Qualification Program' },
     { name: 'NCA Candidate', issuer: 'National Committee on Accreditation' },
 ]
 
